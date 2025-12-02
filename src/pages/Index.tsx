@@ -30,7 +30,7 @@ const Index = () => {
       modules: 1,
       description: 'Идеальное начало для молодой семьи',
       features: ['1 спальня', 'Кухня-гостиная', 'Санузел', 'Терраса'],
-      image: 'https://cdn.poehali.dev/projects/f3244d60-6572-4d78-8638-d635511f8455/files/718de6d5-672c-483c-8a6c-1d49cd996438.jpg'
+      image: 'https://cdn.poehali.dev/projects/f3244d60-6572-4d78-8638-d635511f8455/files/7cf9b675-9925-4318-970c-65fdf5d4395b.jpg'
     },
     {
       title: 'Семейный дом',
@@ -38,7 +38,7 @@ const Index = () => {
       modules: 2,
       description: 'Расширение для растущей семьи',
       features: ['3 спальни', 'Гостиная', '2 санузла', 'Кабинет'],
-      image: 'https://cdn.poehali.dev/projects/f3244d60-6572-4d78-8638-d635511f8455/files/d63718a0-91e9-4631-ab11-d69f29800945.jpg'
+      image: 'https://cdn.poehali.dev/projects/f3244d60-6572-4d78-8638-d635511f8455/files/275dd652-ebf1-426e-884e-7a5e8227e8ee.jpg'
     },
     {
       title: 'Просторная резиденция',
@@ -46,7 +46,7 @@ const Index = () => {
       modules: 3,
       description: 'Полноценный дом с дополнительным пространством',
       features: ['4 спальни', 'Гостиная', '3 санузла', 'Гардеробная', 'Гараж'],
-      image: 'https://cdn.poehali.dev/projects/f3244d60-6572-4d78-8638-d635511f8455/files/d17198e7-28b2-4bf2-9bae-2c604fcb446a.jpg'
+      image: 'https://cdn.poehali.dev/projects/f3244d60-6572-4d78-8638-d635511f8455/files/5426ece1-0658-45aa-820a-75ac134cc751.jpg'
     }
   ];
 
