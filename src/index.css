@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -15,26 +15,26 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 199 89% 48%;
+    --primary: 220 13% 18%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 262 83% 58%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 36 28% 65%;
+    --secondary-foreground: 220 13% 18%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 30 20% 97%;
+    --muted-foreground: 220 9% 46%;
 
-    --accent: 24 95% 53%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 36 39% 88%;
+    --accent-foreground: 220 13% 18%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 199 89% 48%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 220 13% 18%;
 
-    --radius: 0.75rem;
+    --radius: 0.25rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -108,7 +108,8 @@
   h4,
   h5,
   h6 {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+    letter-spacing: -0.02em;
   }
 }

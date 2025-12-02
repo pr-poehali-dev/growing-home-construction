@@ -74,78 +74,71 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white via-blue-50 to-purple-50">
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-200">
-        <div className="container mx-auto px-6 py-4">
+    <div className="min-h-screen bg-white">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-border">
+        <div className="container mx-auto px-8 py-6">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
-                <Icon name="Home" className="text-white" size={24} />
-              </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                Растущий Дом
-              </span>
-            </div>
-            <div className="hidden md:flex gap-8">
+            <span className="text-2xl font-light text-primary tracking-wide">
+              Растущий Дом
+            </span>
+            <div className="hidden md:flex gap-12">
               <button
                 onClick={() => scrollToSection('hero')}
-                className="text-gray-700 hover:text-primary transition-colors font-medium"
+                className="text-sm text-muted-foreground hover:text-primary transition-colors uppercase tracking-wider"
               >
                 Главная
               </button>
               <button
                 onClick={() => scrollToSection('technology')}
-                className="text-gray-700 hover:text-primary transition-colors font-medium"
+                className="text-sm text-muted-foreground hover:text-primary transition-colors uppercase tracking-wider"
               >
-                О технологии
+                Технология
               </button>
               <button
                 onClick={() => scrollToSection('projects')}
-                className="text-gray-700 hover:text-primary transition-colors font-medium"
+                className="text-sm text-muted-foreground hover:text-primary transition-colors uppercase tracking-wider"
               >
                 Проекты
               </button>
               <button
                 onClick={() => scrollToSection('calculator')}
-                className="text-gray-700 hover:text-primary transition-colors font-medium"
+                className="text-sm text-muted-foreground hover:text-primary transition-colors uppercase tracking-wider"
               >
-                Расчёт стоимости
+                Стоимость
               </button>
               <button
                 onClick={() => scrollToSection('contacts')}
-                className="text-gray-700 hover:text-primary transition-colors font-medium"
+                className="text-sm text-muted-foreground hover:text-primary transition-colors uppercase tracking-wider"
               >
                 Контакты
               </button>
             </div>
             <Button
               onClick={() => scrollToSection('contacts')}
-              className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 px-8"
+              variant="default"
             >
-              Связаться
+              Консультация
             </Button>
           </div>
         </div>
       </nav>
 
-      <section id="hero" className="pt-32 pb-20 px-6">
-        <div className="container mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+      <section id="hero" className="pt-40 pb-32 px-8">
+        <div className="container mx-auto max-w-7xl">
+          <div className="grid md:grid-cols-2 gap-20 items-center">
             <div className="animate-fade-in">
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                Дом, который{' '}
-                <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-                  растёт вместе с вами
-                </span>
+              <h1 className="text-5xl md:text-7xl mb-8 leading-[1.1] text-primary">
+                Дом, который растёт вместе с вами
               </h1>
-              <p className="text-xl text-gray-600 mb-8">
+              <p className="text-lg text-muted-foreground mb-12 leading-relaxed font-light">
                 Инновационная технология prefab-строительства. Начните с малого и расширяйте дом по мере необходимости.
               </p>
-              <div className="flex gap-4">
+              <div className="flex gap-6">
                 <Button
                   size="lg"
                   onClick={() => scrollToSection('calculator')}
-                  className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity"
+                  className="bg-primary text-primary-foreground hover:bg-primary/90 px-8"
                 >
                   Рассчитать стоимость
                 </Button>
@@ -153,20 +146,19 @@ const Index = () => {
                   size="lg"
                   variant="outline"
                   onClick={() => scrollToSection('technology')}
-                  className="border-2 border-primary text-primary hover:bg-primary hover:text-white"
+                  className="border border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8"
                 >
                   Узнать больше
                 </Button>
               </div>
             </div>
             <div className="relative animate-scale-in">
-              <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 p-8 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 animate-pulse"></div>
-                <div className="relative z-10 h-full flex flex-col gap-4">
+              <div className="aspect-square bg-muted p-12 relative overflow-hidden">
+                <div className="relative z-10 h-full flex flex-col gap-6">
                   {[1, 2, 3].map((module, idx) => (
                     <div
                       key={module}
-                      className="flex-1 bg-white rounded-xl shadow-lg flex items-center justify-center font-bold text-2xl text-gray-700 transition-all duration-500 hover:scale-105"
+                      className="flex-1 bg-white border border-border flex items-center justify-center text-xl text-primary transition-all duration-500"
                       style={{
                         animationDelay: `${idx * 0.2}s`,
                         opacity: houseModules >= module ? 1 : 0.3
@@ -177,8 +169,8 @@ const Index = () => {
                   ))}
                 </div>
               </div>
-              <div className="mt-6 text-center">
-                <Label className="text-lg font-semibold mb-2 block">
+              <div className="mt-8 text-center">
+                <Label className="text-sm font-light mb-4 block text-muted-foreground uppercase tracking-wider">
                   Количество модулей: {houseModules}
                 </Label>
                 <Slider
@@ -195,275 +187,249 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="technology" className="py-20 px-6 bg-white">
-        <div className="container mx-auto">
-          <div className="text-center mb-16 animate-slide-up">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Технология <span className="text-primary">Prefab</span>
+      <section id="technology" className="py-32 px-8 bg-muted">
+        <div className="container mx-auto max-w-7xl">
+          <div className="text-center mb-20 animate-slide-up">
+            <h2 className="text-4xl md:text-6xl mb-6 text-primary">
+              Технология Prefab
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-light">
               Каркасно-панельное строительство нового поколения
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
             {techFeatures.map((feature, idx) => (
-              <Card
+              <div
                 key={idx}
-                className="border-2 hover:border-primary transition-all duration-300 hover:shadow-lg animate-fade-in"
+                className="animate-fade-in"
                 style={{ animationDelay: `${idx * 0.1}s` }}
               >
-                <CardContent className="pt-6">
-                  <div className="w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center mb-4">
-                    <Icon name={feature.icon} className="text-white" size={28} />
-                  </div>
-                  <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
-                  <p className="text-gray-600">{feature.description}</p>
-                </CardContent>
-              </Card>
+                <div className="mb-6">
+                  <Icon name={feature.icon} className="text-secondary" size={32} />
+                </div>
+                <h3 className="text-xl mb-3 text-primary">{feature.title}</h3>
+                <p className="text-muted-foreground font-light leading-relaxed">{feature.description}</p>
+              </div>
             ))}
           </div>
-          <div className="mt-16 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-8 md:p-12">
-            <div className="grid md:grid-cols-3 gap-8 text-center">
+          <div className="mt-24 border-t border-border pt-20">
+            <div className="grid md:grid-cols-3 gap-16 text-center">
               <div>
-                <div className="text-4xl font-bold text-primary mb-2">5-7 дней</div>
-                <div className="text-gray-700">Срок сборки</div>
+                <div className="text-5xl mb-4 text-primary">5-7</div>
+                <div className="text-sm text-muted-foreground uppercase tracking-wider">Дней сборки</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-secondary mb-2">99%</div>
-                <div className="text-gray-700">Заводская готовность</div>
+                <div className="text-5xl mb-4 text-primary">99%</div>
+                <div className="text-sm text-muted-foreground uppercase tracking-wider">Заводская готовность</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-accent mb-2">+30%</div>
-                <div className="text-gray-700">Экономия времени</div>
+                <div className="text-5xl mb-4 text-primary">+30%</div>
+                <div className="text-sm text-muted-foreground uppercase tracking-wider">Экономия времени</div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="projects" className="py-20 px-6 bg-gradient-to-br from-blue-50 to-purple-50">
-        <div className="container mx-auto">
-          <div className="text-center mb-16 animate-slide-up">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Наши <span className="text-secondary">проекты</span>
+      <section id="projects" className="py-32 px-8 bg-white">
+        <div className="container mx-auto max-w-7xl">
+          <div className="text-center mb-20 animate-slide-up">
+            <h2 className="text-4xl md:text-6xl mb-6 text-primary">
+              Наши проекты
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-light">
               От компактного старта до просторной резиденции
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-12">
             {projects.map((project, idx) => (
-              <Card
+              <div
                 key={idx}
-                className="overflow-hidden hover:shadow-2xl transition-all duration-300 animate-scale-in border-2 hover:border-primary"
+                className="group cursor-pointer animate-scale-in"
                 style={{ animationDelay: `${idx * 0.15}s` }}
               >
-                <div className="h-48 relative overflow-hidden">
+                <div className="aspect-[4/3] relative overflow-hidden mb-6">
                   <img 
                     src={project.image} 
                     alt={project.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute top-4 right-4 bg-white px-4 py-2 rounded-full font-bold text-primary shadow-lg">
+                  <div className="absolute top-6 right-6 bg-white px-4 py-2 text-sm text-primary">
                     {project.area}
                   </div>
                 </div>
-                <CardContent className="p-6">
-                  <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
-                  <p className="text-gray-600 mb-4">{project.description}</p>
-                  <div className="space-y-2">
-                    {project.features.map((feature, fidx) => (
-                      <div key={fidx} className="flex items-center gap-2 text-sm text-gray-700">
-                        <Icon name="Check" size={16} className="text-primary" />
-                        {feature}
-                      </div>
-                    ))}
-                  </div>
-                  <Button className="w-full mt-6 bg-gradient-to-r from-primary to-secondary">
-                    Подробнее
-                  </Button>
-                </CardContent>
-              </Card>
+                <h3 className="text-2xl mb-3 text-primary">{project.title}</h3>
+                <p className="text-muted-foreground mb-6 font-light leading-relaxed">{project.description}</p>
+                <div className="space-y-3">
+                  {project.features.map((feature, fidx) => (
+                    <div key={fidx} className="flex items-center gap-3 text-sm text-muted-foreground">
+                      <div className="w-1 h-1 bg-secondary"></div>
+                      {feature}
+                    </div>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="calculator" className="py-20 px-6 bg-white">
+      <section id="calculator" className="py-32 px-8 bg-muted">
         <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-12 animate-slide-up">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Рассчитайте <span className="text-accent">стоимость</span>
+          <div className="text-center mb-16 animate-slide-up">
+            <h2 className="text-4xl md:text-6xl mb-6 text-primary">
+              Рассчитайте стоимость
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-lg text-muted-foreground font-light">
               Узнайте примерную стоимость вашего растущего дома
             </p>
           </div>
-          <Card className="border-2 shadow-xl">
-            <CardContent className="p-8">
-              <div className="space-y-8">
-                <div>
-                  <Label className="text-lg font-semibold mb-3 block">
-                    Площадь дома: {area} м²
-                  </Label>
-                  <Slider
-                    value={[area]}
-                    onValueChange={(value) => setArea(value[0])}
-                    min={30}
-                    max={200}
-                    step={10}
-                    className="my-4"
-                  />
-                  <div className="flex justify-between text-sm text-gray-500">
-                    <span>30 м²</span>
-                    <span>200 м²</span>
-                  </div>
+          <div className="bg-white p-12">
+            <div className="space-y-12">
+              <div>
+                <Label className="text-sm font-light mb-6 block text-muted-foreground uppercase tracking-wider">
+                  Площадь дома: {area} м²
+                </Label>
+                <Slider
+                  value={[area]}
+                  onValueChange={(value) => setArea(value[0])}
+                  min={30}
+                  max={200}
+                  step={10}
+                  className="my-6"
+                />
+                <div className="flex justify-between text-sm text-muted-foreground">
+                  <span>30 м²</span>
+                  <span>200 м²</span>
                 </div>
-
-                <div>
-                  <Label className="text-lg font-semibold mb-3 block">
-                    Количество этажей: {floors}
-                  </Label>
-                  <Slider
-                    value={[floors]}
-                    onValueChange={(value) => setFloors(value[0])}
-                    min={1}
-                    max={2}
-                    step={1}
-                    className="my-4"
-                  />
-                  <div className="flex justify-between text-sm text-gray-500">
-                    <span>1 этаж</span>
-                    <span>2 этажа</span>
-                  </div>
-                </div>
-
-                <div className="pt-6 border-t-2">
-                  <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-xl p-6 text-center">
-                    <div className="text-sm text-gray-600 mb-2">Примерная стоимость</div>
-                    <div className="text-4xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                      {calculatePrice()} ₽
-                    </div>
-                    <div className="text-sm text-gray-500 mt-2">
-                      {Math.round(25000).toLocaleString('ru-RU')} ₽/м²
-                    </div>
-                  </div>
-                </div>
-
-                <Button
-                  size="lg"
-                  className="w-full bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity"
-                  onClick={() => scrollToSection('contacts')}
-                >
-                  Получить точный расчёт
-                </Button>
               </div>
-            </CardContent>
-          </Card>
+
+              <div>
+                <Label className="text-sm font-light mb-6 block text-muted-foreground uppercase tracking-wider">
+                  Количество этажей: {floors}
+                </Label>
+                <Slider
+                  value={[floors]}
+                  onValueChange={(value) => setFloors(value[0])}
+                  min={1}
+                  max={2}
+                  step={1}
+                  className="my-6"
+                />
+                <div className="flex justify-between text-sm text-muted-foreground">
+                  <span>1 этаж</span>
+                  <span>2 этажа</span>
+                </div>
+              </div>
+
+              <div className="pt-12 border-t border-border">
+                <div className="text-center">
+                  <div className="text-sm text-muted-foreground mb-4 uppercase tracking-wider">Примерная стоимость</div>
+                  <div className="text-5xl mb-2 text-primary">
+                    {calculatePrice()} ₽
+                  </div>
+                  <div className="text-sm text-muted-foreground">
+                    {Math.round(25000).toLocaleString('ru-RU')} ₽/м²
+                  </div>
+                </div>
+              </div>
+
+              <Button
+                size="lg"
+                className="w-full bg-primary text-primary-foreground hover:bg-primary/90 py-6"
+                onClick={() => scrollToSection('contacts')}
+              >
+                Получить точный расчёт
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section id="contacts" className="py-20 px-6 bg-gradient-to-br from-primary/5 to-secondary/5">
+      <section id="contacts" className="py-32 px-8 bg-white">
         <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-12 animate-slide-up">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Свяжитесь <span className="text-primary">с нами</span>
+          <div className="text-center mb-16 animate-slide-up">
+            <h2 className="text-4xl md:text-6xl mb-6 text-primary">
+              Свяжитесь с нами
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-lg text-muted-foreground font-light">
               Ответим на все вопросы и поможем реализовать проект
             </p>
           </div>
-          <Card className="border-2 shadow-xl">
-            <CardContent className="p-8">
-              <div className="grid md:grid-cols-2 gap-6 mb-8">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Icon name="Phone" className="text-primary" size={24} />
-                  </div>
-                  <div>
-                    <div className="font-semibold mb-1">Телефон</div>
-                    <div className="text-gray-600">+7 (999) 123-45-67</div>
-                  </div>
+          <div className="bg-muted p-12">
+            <div className="grid md:grid-cols-2 gap-12 mb-12">
+              <div>
+                <div className="text-sm text-muted-foreground uppercase tracking-wider mb-2">Телефон</div>
+                <div className="text-lg text-primary">+7 (999) 123-45-67</div>
+              </div>
+              <div>
+                <div className="text-sm text-muted-foreground uppercase tracking-wider mb-2">Email</div>
+                <div className="text-lg text-primary">info@growhouse.ru</div>
+              </div>
+            </div>
+
+            <form className="space-y-8">
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <Label htmlFor="name" className="text-sm text-muted-foreground uppercase tracking-wider">Ваше имя</Label>
+                  <Input id="name" placeholder="Иван Иванов" className="mt-3 bg-white" />
                 </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Icon name="Mail" className="text-secondary" size={24} />
-                  </div>
-                  <div>
-                    <div className="font-semibold mb-1">Email</div>
-                    <div className="text-gray-600">info@growhouse.ru</div>
-                  </div>
+                <div>
+                  <Label htmlFor="phone" className="text-sm text-muted-foreground uppercase tracking-wider">Телефон</Label>
+                  <Input id="phone" placeholder="+7 (999) 123-45-67" className="mt-3 bg-white" />
                 </div>
               </div>
-
-              <form className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <Label htmlFor="name">Ваше имя</Label>
-                    <Input id="name" placeholder="Иван Иванов" className="mt-2" />
-                  </div>
-                  <div>
-                    <Label htmlFor="phone">Телефон</Label>
-                    <Input id="phone" placeholder="+7 (999) 123-45-67" className="mt-2" />
-                  </div>
-                </div>
-                <div>
-                  <Label htmlFor="email">Email</Label>
-                  <Input id="email" type="email" placeholder="example@mail.ru" className="mt-2" />
-                </div>
-                <div>
-                  <Label htmlFor="message">Сообщение</Label>
-                  <textarea
-                    id="message"
-                    rows={4}
-                    placeholder="Расскажите о вашем проекте..."
-                    className="mt-2 w-full px-3 py-2 border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-ring"
-                  />
-                </div>
-                <Button
-                  type="submit"
-                  size="lg"
-                  className="w-full bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity"
-                >
-                  Отправить заявку
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
+              <div>
+                <Label htmlFor="email" className="text-sm text-muted-foreground uppercase tracking-wider">Email</Label>
+                <Input id="email" type="email" placeholder="example@mail.ru" className="mt-3 bg-white" />
+              </div>
+              <div>
+                <Label htmlFor="message" className="text-sm text-muted-foreground uppercase tracking-wider">Сообщение</Label>
+                <textarea
+                  id="message"
+                  rows={4}
+                  placeholder="Расскажите о вашем проекте..."
+                  className="mt-3 w-full px-4 py-3 border border-input bg-white focus:outline-none focus:ring-1 focus:ring-ring font-light"
+                />
+              </div>
+              <Button
+                type="submit"
+                size="lg"
+                className="w-full bg-primary text-primary-foreground hover:bg-primary/90 py-6"
+              >
+                Отправить заявку
+              </Button>
+            </form>
+          </div>
         </div>
       </section>
 
-      <footer className="bg-gray-900 text-white py-12 px-6">
-        <div className="container mx-auto">
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
+      <footer className="bg-primary text-primary-foreground py-16 px-8">
+        <div className="container mx-auto max-w-7xl">
+          <div className="grid md:grid-cols-3 gap-16 mb-12">
             <div>
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
-                  <Icon name="Home" className="text-white" size={24} />
-                </div>
-                <span className="text-xl font-bold">Растущий Дом</span>
-              </div>
-              <p className="text-gray-400">
+              <span className="text-2xl font-light mb-6 block">Растущий Дом</span>
+              <p className="text-primary-foreground/70 font-light">
                 Инновационное строительство для современной жизни
               </p>
             </div>
             <div>
-              <h4 className="font-bold mb-4">Навигация</h4>
-              <div className="space-y-2 text-gray-400">
-                <div className="cursor-pointer hover:text-white transition-colors" onClick={() => scrollToSection('hero')}>Главная</div>
-                <div className="cursor-pointer hover:text-white transition-colors" onClick={() => scrollToSection('technology')}>О технологии</div>
-                <div className="cursor-pointer hover:text-white transition-colors" onClick={() => scrollToSection('projects')}>Проекты</div>
+              <h4 className="text-sm uppercase tracking-wider mb-6">Навигация</h4>
+              <div className="space-y-3 text-primary-foreground/70 font-light">
+                <div className="cursor-pointer hover:text-primary-foreground transition-colors" onClick={() => scrollToSection('hero')}>Главная</div>
+                <div className="cursor-pointer hover:text-primary-foreground transition-colors" onClick={() => scrollToSection('technology')}>Технология</div>
+                <div className="cursor-pointer hover:text-primary-foreground transition-colors" onClick={() => scrollToSection('projects')}>Проекты</div>
               </div>
             </div>
             <div>
-              <h4 className="font-bold mb-4">Контакты</h4>
-              <div className="space-y-2 text-gray-400">
+              <h4 className="text-sm uppercase tracking-wider mb-6">Контакты</h4>
+              <div className="space-y-3 text-primary-foreground/70 font-light">
                 <div>+7 (999) 123-45-67</div>
                 <div>info@growhouse.ru</div>
               </div>
             </div>
           </div>
-          <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
+          <div className="border-t border-primary-foreground/20 pt-8 text-center text-primary-foreground/60 text-sm font-light">
             <p>&copy; 2024 Растущий Дом. Все права защищены.</p>
           </div>
         </div>
