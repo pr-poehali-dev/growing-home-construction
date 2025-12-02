@@ -95,6 +95,12 @@ const Index = () => {
                 Технология
               </button>
               <button
+                onClick={() => scrollToSection('stages')}
+                className="text-sm text-muted-foreground hover:text-primary transition-colors uppercase tracking-wider"
+              >
+                Этапы
+              </button>
+              <button
                 onClick={() => scrollToSection('projects')}
                 className="text-sm text-muted-foreground hover:text-primary transition-colors uppercase tracking-wider"
               >
@@ -227,6 +233,175 @@ const Index = () => {
                 <div className="text-sm text-muted-foreground uppercase tracking-wider">Экономия времени</div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="stages" className="py-32 px-8 bg-white">
+        <div className="container mx-auto max-w-7xl">
+          <div className="text-center mb-20 animate-slide-up">
+            <h2 className="text-4xl md:text-6xl mb-6 text-primary">
+              Этапы строительства
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-light">
+              От заказа до въезда — прозрачный процесс в 5 этапов
+            </p>
+          </div>
+          
+          <div className="space-y-24">
+            <div className="grid md:grid-cols-2 gap-16 items-center">
+              <div className="order-2 md:order-1">
+                <div className="text-6xl font-light text-secondary mb-6">01</div>
+                <h3 className="text-3xl mb-4 text-primary">Консультация и проект</h3>
+                <p className="text-muted-foreground font-light leading-relaxed mb-6">
+                  Обсуждаем ваши потребности, выбираем оптимальную конфигурацию модулей. Создаём индивидуальный проект с учётом участка и будущего расширения.
+                </p>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3 text-sm text-muted-foreground">
+                    <div className="w-1 h-1 bg-secondary"></div>
+                    Встреча с архитектором
+                  </div>
+                  <div className="flex items-center gap-3 text-sm text-muted-foreground">
+                    <div className="w-1 h-1 bg-secondary"></div>
+                    3D-визуализация проекта
+                  </div>
+                  <div className="flex items-center gap-3 text-sm text-muted-foreground">
+                    <div className="w-1 h-1 bg-secondary"></div>
+                    Смета и договор
+                  </div>
+                </div>
+              </div>
+              <div className="order-1 md:order-2 aspect-[4/3] bg-muted"></div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-16 items-center">
+              <div className="aspect-[4/3] bg-muted overflow-hidden">
+                <img 
+                  src="https://cdn.poehali.dev/projects/f3244d60-6572-4d78-8638-d635511f8455/files/91056a1a-d4af-4424-bde4-9a019bf9fd29.jpg" 
+                  alt="Производство модулей"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <div className="text-6xl font-light text-secondary mb-6">02</div>
+                <h3 className="text-3xl mb-4 text-primary">Производство модулей</h3>
+                <p className="text-muted-foreground font-light leading-relaxed mb-6">
+                  На заводе изготавливаются все панели и элементы конструкции. Полный контроль качества на каждом этапе производства.
+                </p>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3 text-sm text-muted-foreground">
+                    <div className="w-1 h-1 bg-secondary"></div>
+                    Заводская сборка панелей
+                  </div>
+                  <div className="flex items-center gap-3 text-sm text-muted-foreground">
+                    <div className="w-1 h-1 bg-secondary"></div>
+                    Контроль качества материалов
+                  </div>
+                  <div className="flex items-center gap-3 text-sm text-muted-foreground">
+                    <div className="w-1 h-1 bg-secondary"></div>
+                    Срок: 2-3 недели
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-16 items-center">
+              <div className="order-2 md:order-1">
+                <div className="text-6xl font-light text-secondary mb-6">03</div>
+                <h3 className="text-3xl mb-4 text-primary">Фундамент и подготовка</h3>
+                <p className="text-muted-foreground font-light leading-relaxed mb-6">
+                  Пока идёт производство, подготавливаем участок и закладываем фундамент. Параллельные процессы экономят время.
+                </p>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3 text-sm text-muted-foreground">
+                    <div className="w-1 h-1 bg-secondary"></div>
+                    Разметка участка
+                  </div>
+                  <div className="flex items-center gap-3 text-sm text-muted-foreground">
+                    <div className="w-1 h-1 bg-secondary"></div>
+                    Свайно-винтовой фундамент
+                  </div>
+                  <div className="flex items-center gap-3 text-sm text-muted-foreground">
+                    <div className="w-1 h-1 bg-secondary"></div>
+                    Коммуникации
+                  </div>
+                </div>
+              </div>
+              <div className="order-1 md:order-2 aspect-[4/3] bg-muted overflow-hidden">
+                <img 
+                  src="https://cdn.poehali.dev/projects/f3244d60-6572-4d78-8638-d635511f8455/files/ef34e4d8-8ff1-4f1e-bc85-cdf6f4a4ba28.jpg" 
+                  alt="Фундамент и подготовка"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-16 items-center">
+              <div className="aspect-[4/3] bg-muted overflow-hidden">
+                <img 
+                  src="https://cdn.poehali.dev/projects/f3244d60-6572-4d78-8638-d635511f8455/files/d18be398-aaff-4d99-ab14-8bdcd2f51637.jpg" 
+                  alt="Сборка модулей"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <div className="text-6xl font-light text-secondary mb-6">04</div>
+                <h3 className="text-3xl mb-4 text-primary">Сборка модулей</h3>
+                <p className="text-muted-foreground font-light leading-relaxed mb-6">
+                  Готовые панели доставляются на участок. Профессиональная бригада собирает дом за 5-7 дней.
+                </p>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3 text-sm text-muted-foreground">
+                    <div className="w-1 h-1 bg-secondary"></div>
+                    Доставка панелей
+                  </div>
+                  <div className="flex items-center gap-3 text-sm text-muted-foreground">
+                    <div className="w-1 h-1 bg-secondary"></div>
+                    Монтаж конструкции
+                  </div>
+                  <div className="flex items-center gap-3 text-sm text-muted-foreground">
+                    <div className="w-1 h-1 bg-secondary"></div>
+                    Кровля и фасад
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-16 items-center">
+              <div className="order-2 md:order-1">
+                <div className="text-6xl font-light text-secondary mb-6">05</div>
+                <h3 className="text-3xl mb-4 text-primary">Отделка и въезд</h3>
+                <p className="text-muted-foreground font-light leading-relaxed mb-6">
+                  Финальная отделка, установка окон и дверей, подключение коммуникаций. Дом готов к комфортной жизни.
+                </p>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3 text-sm text-muted-foreground">
+                    <div className="w-1 h-1 bg-secondary"></div>
+                    Внутренняя отделка
+                  </div>
+                  <div className="flex items-center gap-3 text-sm text-muted-foreground">
+                    <div className="w-1 h-1 bg-secondary"></div>
+                    Инженерные системы
+                  </div>
+                  <div className="flex items-center gap-3 text-sm text-muted-foreground">
+                    <div className="w-1 h-1 bg-secondary"></div>
+                    Приёмка и гарантия
+                  </div>
+                </div>
+              </div>
+              <div className="order-1 md:order-2 aspect-[4/3] bg-muted overflow-hidden">
+                <img 
+                  src="https://cdn.poehali.dev/projects/f3244d60-6572-4d78-8638-d635511f8455/files/04ad76be-fe6a-4cc2-bcea-a863dad90b2c.jpg" 
+                  alt="Отделка и въезд"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-24 text-center border-t border-border pt-20">
+            <div className="text-5xl mb-4 text-primary">30-45</div>
+            <div className="text-sm text-muted-foreground uppercase tracking-wider">Дней от заказа до въезда</div>
           </div>
         </div>
       </section>
